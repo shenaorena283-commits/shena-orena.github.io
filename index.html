@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Like Button App</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #071426, #30205b);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            text-align: center;
+            width: 320px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            color: #222;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        button {
+            background: #e91e63;
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 30px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #c2185b;
+            transform: scale(1.05);
+        }
+
+        #message {
+            margin-top: 20px;
+            color: green;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>My Application</h2>
+
+        <p>Click the button below to open the linked application.</p>
+
+        <button onclick="openApp()">
+            ❤️ Like
+        </button>
+
+        <div id="message"></div>
+
+    </div>
+
+    <script>
+        function openApp() {
+
+            const appLink = "https://42cd11e8f3484a6b8c566606165aa339-share.flutterflow.cloud/s/42cd11e8f3484a6b8c566606165aa339/?key=ATVilprkEsmC2k_rafymk-NjM4H7x4wVo99Wl14XaH0";
+
+            document.getElementById("message").innerHTML =
+                "Opening linked application...";
+
+            window.location.href = appLink;
+        }
+    </script>
+
+</body>
+</html>
